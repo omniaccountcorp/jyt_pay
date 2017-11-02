@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>
+  File: README
+  
+    &mdash; Documentation by YARD 0.9.9
+  
+</title>
+
+  <link rel="stylesheet" href="css/style.css" type="text/css" charset="utf-8" />
+
+  <link rel="stylesheet" href="css/common.css" type="text/css" charset="utf-8" />
+
+<script type="text/javascript" charset="utf-8">
+  pathId = "README";
+  relpath = '';
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="js/app.js"></script>
+
+
+  </head>
+  <body>
+    <div class="nav_wrap">
+      <iframe id="nav" src="class_list.html?1"></iframe>
+      <div id="resizer"></div>
+    </div>
+
+    <div id="main" tabindex="-1">
+      <div id="header">
+        <div id="menu">
+  
+    <a href="_index.html">Index</a> &raquo; 
+    <span class="title">File: README</span>
+  
+</div>
+
+        <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="class_list.html">
+
+        <svg width="24" height="24">
+          <rect x="0" y="4" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="12" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="20" width="24" height="4" rx="1" ry="1"></rect>
+        </svg>
+    </a>
+  
+</div>
+        <div class="clear"></div>
+      </div>
+
+      <div id="content"><div id='filecontents'>
+<h1 id="label-JytPay">JytPay</h1>
+
+<p>金运通支付 API ruby sdk，目前提供以下接口</p>
+<ol><li>
+<p>四要素认证</p>
+</li><li>
+<p>商户余额查询</p>
+</li><li>
+<p>代扣请求接口</p>
+</li><li>
+<p>代付请求接口</p>
+</li><li>
+<p>查询代扣代付订单</p>
+</li></ol>
+
+<h2 id="label-E5-AE-89-E8-A3-85">安装</h2>
+
+<p>Gemfile 中增加:</p>
+
+<pre class="code ruby"><code class="ruby"><span class='id identifier rubyid_gem'>gem</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>jyt_pay</span><span class='tstring_end'>&#39;</span></span>
+</code></pre>
+
+<p>然后执行命令:</p>
+
+<pre class="code ruby"><code class="ruby">$ bundle</code></pre>
+
+<p>或者直接安装:</p>
+
+<pre class="code ruby"><code class="ruby">$ gem install jyt_pay</code></pre>
+
+<h2 id="label-E5-BF-AB-E9-80-9F-E6-8C-87-E5-8D-97">快速指南</h2>
+<ol><li>
+<p>初始化</p>
+</li></ol>
+
+<pre class="code ruby"><code class="ruby"><span class='id identifier rubyid_client'>client</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="JytPay.html" title="JytPay (module)">JytPay</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="JytPay/Client.html" title="JytPay::Client (class)">Client</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="JytPay/Client.html#initialize-instance_method" title="JytPay::Client#initialize (method)">new</a></span></span><span class='lparen'>(</span><span class='label'>merchant_id:</span> <span class='id identifier rubyid_merchant_id'>merchant_id</span><span class='comma'>,</span>
+                                <span class='label'>mer_viral_acct:</span> <span class='id identifier rubyid_mer_viral_acct'>mer_viral_acct</span><span class='comma'>,</span>
+                                <span class='label'>auth_url:</span> <span class='id identifier rubyid_auth_url'>auth_url</span><span class='comma'>,</span>
+                                <span class='label'>pay_url:</span> <span class='id identifier rubyid_pay_url'>pay_url</span><span class='comma'>,</span>
+                                <span class='label'>draw_url:</span> <span class='id identifier rubyid_draw_url'>draw_url</span><span class='comma'>,</span>
+                                <span class='label'>query_balance_url:</span> <span class='id identifier rubyid_query_balance_url'>query_balance_url</span><span class='comma'>,</span>
+                                <span class='label'>private_key:</span> <span class='id identifier rubyid_private_key'>private_key</span><span class='comma'>,</span>
+                                <span class='label'>jyt_public_key:</span> <span class='id identifier rubyid_jyt_public_key'>jyt_public_key</span><span class='rparen'>)</span>
+</code></pre>
+<ol><li>
+<p>调用各个 api，比如查询接口：</p>
+</li></ol>
+
+<pre class="code ruby"><code class="ruby"><span class='id identifier rubyid_client'>client</span><span class='period'>.</span><span class='id identifier rubyid_query_balance'>query_balance</span><span class='lparen'>(</span><span class='id identifier rubyid_商户自定义唯一订单号'>商户自定义唯一订单号</span><span class='rparen'>)</span>
+</code></pre>
+
+<h2 id="label-Contributing">Contributing</h2>
+
+<p>Bug reports and pull requests are welcome on GitHub at <a
+href="https://github.com/[USERNAME]/jyt_pay">github.com/[USERNAME]/jyt_pay</a>.
+This project is intended to be a safe, welcoming space for collaboration,
+and contributors are expected to adhere to the <a
+href="http://contributor-covenant.org">Contributor Covenant</a> code of
+conduct.</p>
+
+<h2 id="label-Make+a+pull+request">Make a pull request</h2>
+<ol><li>
+<p>Fork it</p>
+</li><li>
+<p>Create your feature branch (git checkout -b my-new-feature)</p>
+</li><li>
+<p>Commit your changes (git commit -am &#39;Add some feature&#39;)</p>
+</li><li>
+<p>Push to the branch (git push origin my-new-feature)</p>
+</li><li>
+<p>Create new Pull Request</p>
+</li><li>
+<p>Please write unit test with your code if necessary.</p>
+</li></ol>
+
+<h2 id="label-License">License</h2>
+
+<p>The gem is available as open source under the terms of the <a
+href="http://opensource.org/licenses/MIT">MIT License</a>.</p>
+</div></div>
+
+      <div id="footer">
+  Generated on Thu Nov  2 20:02:48 2017 by
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.9.9 (ruby-2.3.5).
+</div>
+
+    </div>
+  </body>
+</html>
