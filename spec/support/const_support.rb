@@ -9,7 +9,7 @@ module ConstSupport
 
   # 虚拟账号
   def mer_viral_acct
-    '1'
+    ''
   end
 
   def private_key
