@@ -42,7 +42,7 @@ describe '查询' do
 
       puts result
 
-      expect(result[:result]).to eq('S')
+      expect(['S', 'P'].include?(result[:result])).to eq(true)
     end
   end
 

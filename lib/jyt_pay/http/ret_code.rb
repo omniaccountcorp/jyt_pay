@@ -7,7 +7,7 @@ module JytPay
       def self.general_error_response(http_status)
         result = {
           head: {
-            resp_code: 'S0000000',
+            resp_code: 'E0000000', # 网络错误，都当 pending
             resp_desc: "网络错误( http 状态码：#{http_status})"
           },
           body: {

@@ -9,7 +9,7 @@ module ConstSupport
 
   # 虚拟账号
   def mer_viral_acct
-    ''
+    '1'
   end
 
   def private_key
@@ -48,19 +48,19 @@ gv+yOmeEOjobNpsBycw92Xpg
   def jyt_public_key
     <<-EOF
 -----BEGIN PUBLIC KEY-----
-MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAxVjKlvbwRVfyFYwG6Ai0
-Ip5Z9HPl2VBKnkfSLYbBiWMIinF/oXU4VJZdtR8Fl1wStvMEq/KZ3HEXQb0TBv+g
-lUgXCAqX8Cufz6yGUeafpHwWYtAZ7uZFG/a7lseM04aqEnURJX83GLS+8WU2n/5k
-h1L29gMULvVVmiUtVaScM66fLdHQbh0mUzPDS9sxO3Ru/7ROLwuAJVfswWZ/Bwab
-zlRGrTAbz9Yd1yEHbCstNPwbAGN1fcFVC1Nb+P7qUQuNaMrOzQxk3IELPeN3oMX6
-7ZKOb54U+c4uvj1MTMRpESCLtkJKhIk9QQsN5E8o4E5TPZmIhJXMXAYW/c2ZePhW
-NQIDAQAB
+MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAs/SFJ3wHdQdwGKiZKbxL
+Hed8fpX8waAfqbNv65uCFdd2mMcpswWBawLQvOBhID8i0npWylxj4XfEcwq+pTwe
+tTHjVmJ/s0P34tYasddfy9r7jyqmQzsgw6VQqrQxZNSTyF0YKYmGrvuZ+Hp6z83g
+4XeVyNRwRg7CE803DNMvFWf4Nchy8Y5mFF8X9CLz0j/NkMjSBRjyaDb5PEXOz7nV
+xroWYzMjYFunO2b/1a7eJWQkxV+W1YrLxNnxKjgFXr0jqjkCdC0SdlW/ek9+GtT4
+29++oCz6H8gwFeE5VqjZAHwYNcnmW0fn/jWFOvFyEsy2jiov4m7D8DrkZrrNt+0N
+4wIDAQAB
 -----END PUBLIC KEY-----
     EOF
   end
 
   def auth_url
-    'http://test1.jytpay.com:20080/JytAuth/tranCenter/authReq.do'
+    'https://test.jytpay.com/JytAuth/tranCenter/authReq.do'
   end
 
   def pay_url
@@ -72,7 +72,7 @@ NQIDAQAB
   end
 
   def query_balance_url
-    'https://test.jytpay.com/JytCPService/tranCenter/encXmlReq.do'
+    'https://test.jytpay.com/JytCPService/tranCenter/cpBatchReq.do'
   end
 
   def client

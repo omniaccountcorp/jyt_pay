@@ -15,6 +15,6 @@ describe '单笔同步代付' do
                               '招商银行', '6226095723553456', '王五',
                               '421181198608283272', '浙江', '杭州')
 
-    expect(result[:result]).to eq('S')
+    expect(['S', 'P'].include?(result[:result])).to eq(true)
   end
 end

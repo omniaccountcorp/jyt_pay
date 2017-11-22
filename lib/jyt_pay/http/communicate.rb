@@ -12,7 +12,7 @@ module JytPay
         sign: Sign::Rsa.sign(rsa_private_key, xml_str)
       }
 
-      puts "\n[#{tran_code}][#{server_uri}] 发送原始 xml 为：\n#{xml_str}\n"
+      JytPay.logger.info "\n[#{tran_code}][#{server_uri}] 发送原始 xml 为：\n#{xml_str}\n"
 
       result = {}
 
@@ -25,11 +25,11 @@ module JytPay
           # 非 200 请求
           result = Http::RetCode.general_error_response(response.code)
         end
-      rescue Net::ReadTimeout # 请求超时
+      rescue Net::ReadTimeout # 请求超时，当 pending 处理
         result = Http::RetCode.general_error_response(0)
       end
 
-      puts "\n[#{tran_code}][#{server_uri}] 返回结果为：\n#{result}\n\n"
+      JytPay.logger.info "\n[#{tran_code}][#{server_uri}] 返回结果为：\n#{result}\n\n"
 
       result
     end
