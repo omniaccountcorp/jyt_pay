@@ -25,7 +25,6 @@ module JytPay
       }
 
       @merchant_id = options[:merchant_id]
-      @mer_viral_acct = options[:mer_viral_acct]
       @private_key = options[:private_key]
       @jyt_public_key = options[:jyt_public_key]
 

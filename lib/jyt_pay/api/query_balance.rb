@@ -9,15 +9,16 @@ module JytPay
       # 查询商户当前余额
       #
       # @param flow_id [ String ] 订单号
+      # @param mer_viral_acct [String] 代收/代付账号
       #
       # @return [ Hash ] 结果集
       #   * :result [String] 是否成功，`F`, `S`, `P`
       #   * :msg [String] 结果说明
       #   * :balance [Float] 余额
       #
-      def query_balance(flow_id)
+      def query_balance(flow_id, mer_viral_acct)
         params = {
-          mer_viral_acct: @mer_viral_acct,
+          mer_viral_acct: mer_viral_acct,
         }
 
         xml_str = JytPay::Xml.generate(@merchant_id, QUERY_BALANCE_TRAN_CODE,

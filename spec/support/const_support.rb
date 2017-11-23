@@ -7,11 +7,6 @@ module ConstSupport
     '290060100001' # 测试号
   end
 
-  # 虚拟账号
-  def mer_viral_acct
-    ''
-  end
-
   def private_key
     <<-EOF
 -----BEGIN PRIVATE KEY-----
@@ -77,7 +72,6 @@ xroWYzMjYFunO2b/1a7eJWQkxV+W1YrLxNnxKjgFXr0jqjkCdC0SdlW/ek9+GtT4
 
   def client
     @client ||= JytPay::Client.new(merchant_id: merchant_id,
-                                   mer_viral_acct: mer_viral_acct,
                                    auth_url: auth_url,
                                    pay_url: pay_url,
                                    draw_url: draw_url,
