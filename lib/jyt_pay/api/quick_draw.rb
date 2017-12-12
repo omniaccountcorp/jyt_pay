@@ -14,7 +14,9 @@ module JytPay
       # @param card_id [ String ] 银行卡号
       # @param true_name [ String ] 真实姓名
       # @param identity_id [ String ] 身份证
-      # @param phone [ String ] 银行卡预留手机号
+      # @param province [ String ] 省份
+      # @param city [ String ] 城市
+      # @param account_type [ String ] 账号类别，‘00’:对私，‘01’:对公（默认对私）
       #
       # @return [ Hash ] 结果集
       #   * :result [String] 是否成功，`F`, `S`, `P`
@@ -26,7 +28,7 @@ module JytPay
       #
       def quick_draw(flow_id, money,
                      bank_business_name, card_id,
-                     true_name, identity_id, province, city)
+                     true_name, identity_id, province, city, account_type='00')
 
         params = {
           mer_viral_acct: "",
@@ -34,7 +36,7 @@ module JytPay
           bank_name: bank_business_name,
           account_no: card_id,
           account_name: true_name,
-          account_type: "00", #对私
+          account_type: account_type, #对私
           branch_bank_province: province,
           branch_bank_city: city,
           branch_bank_name: "",
